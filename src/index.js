@@ -1,17 +1,45 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import ReactDOM from 'react-dom';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+//Una forma es la siguiente: 
+// ReactDOM.render(
+//   <React.StrictMode>
+//     <h1>Hola Miguel!</h1>
+//   </React.StrictMode>,
+//   document.getElementById('root')
+// );
+
+//O también se puede escribir de esta forma con JSX:
+//ReactDOM.render(<h1>Hola Miguel!</h1>,document.getElementById('root'));
+
+//También lo podemos escribir así usando codigo JSX:
+//const JSX = <h1>Hola Miguel!</h1>;
+//ReactDOM.render(JSX, document.getElementById('root'));
+
+//O usando codigo JS en las llaves
+/*const nombre = 'Miguel Angel';
+const JSX = <h1>Hola {nombre}!</h1>;
+ReactDOM.render(JSX, document.getElementById('root'));*/
+
+//O usando un contenedor cuando tenemos que poner más de una sentencia JSX
+//Dejar <></> como si fueran contenedores sin div se llaman fragment JSX
+
+/*const nombre = 'Miguel Angel';
+const JSX = (
+  <> 
+      <h1>Hola {nombre}!</h1>
+      <p>Vamos Independiente!!!</p>
+  </>
 );
+ReactDOM.render(JSX, document.getElementById('root'));*/
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+//Usando clases dentro de JSX
+
+const nombre = 'Miguel Angel';
+const JSX = (
+  <> 
+      <h1 >Hola {nombre}!</h1>
+      <p style={{color:'red',fontSize:'3em',font:'bold',fontStyle:'italic'}}>Vamos Independiente!!!</p>
+  </>
+);
+ReactDOM.render(JSX, document.getElementById('root'));
